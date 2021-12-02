@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mr. or Ms.?</title>
+    <meta name="description" content="Here you can find out that your provided name is for a Mr or a Ms">
+    <meta name="author" content="Korosh Roohi">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+    <div class="contentBox">
+        <div class="innerBox">
+            <h2>Mr. or Ms.?</h2>
+            <form>
+                <label for="fname" style="margin-right: 10px;">Name</label>
+                <input type="text" id="fname" name="fname"><br><br><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br><br>
+            </form>
+            <button value="Submit" onclick="onSubmit()" style="margin-bottom: 10px;">Submit</button><br>
+            <button value="Save" onclick="saveGender()">Save</button>
+        </div>
+        <div class="innerBox">
+            <h2>Prediction</h2>
+            <p id="predictedGender"></p>
+            <p id="predictionProbability"></p>
+            <div id="savedAnswerBox" class="dottedBox">
+                <h2>Saved Answer</h2>
+                <p id="savedAsnwer"></p>
+                <button id="clearButton" value="Clear" onclick="clearName()">Clear</button>
+            </div>
+        </div>
+        <script src="js/scripts.js"></script>
+</body>
+</html>
