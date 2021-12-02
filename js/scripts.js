@@ -1,3 +1,4 @@
+// This method calls when the submit button is pressed
 function onSubmit()
 {
     var name = document.getElementById("fname").value
@@ -8,6 +9,7 @@ function onSubmit()
     }
 }
 
+// This method will check the entered name and trigger alert if needed
 function isNameValid(name)
 {
     if(name == null)
@@ -31,6 +33,7 @@ function isNameValid(name)
     return true
 }
 
+// This method will call our specific api for predicting gender of sent name
 function predictGender(name)
 {
     fetch('https://api.genderize.io/?name=' + name)
@@ -65,6 +68,7 @@ function predictGender(name)
         })
 }
 
+// This method will save entered name in local storage
 function saveGender()
 {
     const radioButtons = document.querySelectorAll('input[name="gender"]');
@@ -87,6 +91,7 @@ function saveGender()
     document.getElementById("savedAnswerBox").style.visibility = 'visible'
 }
 
+// This method will remove our saved gender from local storage
 function clearName()
 {
     var name = document.getElementById("fname").value
